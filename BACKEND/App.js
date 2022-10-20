@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 
 
 /* settings */
-app.set("FRONTEND", path.join(__dirname, "../FRONTEND"));
+app.set("views", path.join(__dirname, "../views"));
 
 /* routes */
 app.use(indexRoutes)
