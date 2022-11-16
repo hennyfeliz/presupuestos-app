@@ -1,7 +1,15 @@
+
+
+
 const Form = () => {
+
+  const agregarDato = () => {
+
+  }
+
+
   return (
     <form id="forma" onsubmit="return false;">
-      <div class="agregar">
         <div class="agregar_contenedor">
           <select class="agregar_tipo" id="tipo">
             <option value="ingreso" selected>
@@ -22,11 +30,10 @@ const Form = () => {
             id="valor"
             step="any"
           />
-          <button class="agregar_btn" onclick="agregarDato()">
+          <button class="agregar_btn" onclick={agregarDato}>
             <ion-icon name="checkmark-circle-outline"></ion-icon>
           </button>
         </div>
-      </div>
     </form>
   );
 };
