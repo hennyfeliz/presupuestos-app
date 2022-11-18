@@ -4,9 +4,11 @@ import axios from "axios";
 const Egreso = () => {
   const [ingreso, setIngreso] = useState([]);
 
+  const search = 4
+
   useEffect(() => {
     axios
-      .get(`http://localhost:8081/ingreso/`)
+      .get(`http://localhost:8081/ingreso/searchByPresupuesto/${search}`)
       .then((response) => {
         setIngreso(response.data);
         console.log(response.data);
