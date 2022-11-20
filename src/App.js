@@ -6,9 +6,11 @@ import EgresoContainer from './components/EgresoContainer';
 function App() {
   return (
     <div className="App">
+      <div className='container'>
       <Header />
       <Form />
       <EgresoContainer />
+      </div>
     </div>
   );
 }
