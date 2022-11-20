@@ -1,10 +1,28 @@
+import axios from 'axios';
+import {useEffect, useState} from 'react'
+
 const Header = () => {
+
+  const [presupuesto, setPresupuesto] = useState([]);
+
+  useEffect(() => {
+    axios.get(`http://localhost:8081/presupuesto/4`)
+    .then((response) => {
+      setPresupuesto(response.data[0])
+    })
+    .catch((response) => {
+
+    })
+
+  }, [])
+
+
   return (
     <div class="cabecero">
       <div class="presupuesto">
         <div class="presupuesto_titulo">Presupuesto Disponible</div>
         <div class="presupuesto_valor" id="presupuesto">
-          + 2,000.00
+          + {presupuesto.valor}
         </div>
         <div class="presupuesto_ingreso limpiarEstilos">
           <div class="presupuesto_ingreso--texto">Ingresos</div>
