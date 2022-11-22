@@ -10,8 +10,8 @@ const Header = () => {
     .then((response) => {
       setPresupuesto(response.data[0])
     })
-    .catch((response) => {
-
+    .catch((error) => {
+      console.log(error)
     })
 
   }, [])
